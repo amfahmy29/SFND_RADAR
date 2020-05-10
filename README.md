@@ -1,5 +1,5 @@
 # SFND_RADAR
-<img src="CFAR.png" width="820" height="248" />
+<img src="CFAR.PNG" width="820" height="248" />
 
 #### 1. Radar Specifications
 
@@ -93,8 +93,9 @@ RDM = 10*log10(RDM) ;
 
 selecting the target cells is done by practice and trys to et the best result for the output
 
-1-set the number of Training cells for each dimension Tr and Td. pick the number of guard cells Gr and Gd.
-2-pick an offset.
+*1-set the number of Training cells for each dimension Tr and Td. pick the number of guard cells Gr and Gd.
+*2-pick an offset.
+
 ```
 %Select the number of Training Cells in both the dimensions.
 Tr = 10;
@@ -109,14 +110,14 @@ offset = 1.2;
 ```
 #### 8.CFAR implementation
 
-3-Slide the Cell Under Test (CUT) across the complete cell matrix
-4-Select the grid that includes the training, guard and test cells. Grid Size = (2Tr+2Gr+1)(2Td+2Gd+1).
-5-The total number of cells in the guard region and cell under test. (2Gr+1)(2Gd+1).
-6-This gives the Training Cells : (2Tr+2Gr+1)(2Td+2Gd+1) - (2Gr+1)(2Gd+1)
-7-Measure and average the noise across all the training cells. This gives the threshold
-8-Add the offset (if in signal strength in dB) to the threshold to keep the false alarm to the minimum.
-9-Determine the signal level at the Cell Under Test.
-10-If the CUT level > threshold assign % it a value of `1`, else equate it to `0`.
+1-Slide the Cell Under Test (CUT) across the complete cell matrix
+2-Select the grid that includes the training, guard and test cells. Grid Size = (2Tr+2Gr+1)(2Td+2Gd+1).
+3-The total number of cells in the guard region and cell under test. (2Gr+1)(2Gd+1).
+4-This gives the Training Cells : (2Tr+2Gr+1)(2Td+2Gd+1) - (2Gr+1)(2Gd+1)
+5-Measure and average the noise across all the training cells. This gives the threshold
+6-Add the offset (if in signal strength in dB) to the threshold to keep the false alarm to the minimum.
+7-Determine the signal level at the Cell Under Test.
+8-If the CUT level > threshold assign % it a value of `1`, else equate it to `0`.
 ```
 
 
