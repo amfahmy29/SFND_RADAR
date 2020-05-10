@@ -91,7 +91,7 @@ RDM = 10*log10(RDM) ;
 
 #### 7.Target Cells and Gaurds Cell.
 
-selecting the target cells is done by practice and trys to et the best result for the output
+selecting the target cells is done by practice and trials to get the best result for the output
 
 *set the number of Training cells for each dimension Tr and Td. pick the number of guard cells Gr and Gd.
 
@@ -165,7 +165,9 @@ end
 
 ```
 #### 9.Keep map size
+
 * loop on the edges and set those values to zero
+
 *few cells will not be thresholded. To keep the map size same, set those values to 0
 
 ```
