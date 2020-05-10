@@ -213,13 +213,14 @@ end
 %matrix. Hence,few cells will not be thresholded. To keep the map size same
 % set those values to 0. 
  
-RDM(union(1:(Tr+Gr),end-(Tr+Gr-1):end),:) = 0;  % Rows
-RDM(:,union(1:(Td+Gd),end-(Td+Gd-1):end)) = 0;  % Columns 
-
-
-
-
-
+for i = 1:(Nr/2)
+    for j = 1:Nd
+       if (i > (Tr+Gr))& (i < (Nr/2-(Tr+Gr))) & (j > (Td+Gd)) & (j < (Nd-(Td+Gd)))
+           continue
+       end
+       RDM(i,j) = 0;
+    end
+end
 
 % *%TODO* :
 %display the CFAR output using the Surf function like we did for Range
